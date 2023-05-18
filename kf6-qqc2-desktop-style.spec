@@ -26,6 +26,7 @@ BuildRequires: cmake(Qt6ToolsTools)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: cmake(Qt6Quick)
+BuildRequires: cmake(Qt6QuickControls2)
 
 %description
 Qt Quick Controls 2: Desktop Style
