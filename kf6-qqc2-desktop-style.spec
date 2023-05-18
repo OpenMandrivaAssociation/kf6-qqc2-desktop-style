@@ -29,6 +29,8 @@ BuildRequires: cmake(Qt6Quick)
 BuildRequires: cmake(Qt6QuickControls2)
 BuildRequires: cmake(KF6Config)
 BuildRequires: cmake(KF6Kirigami2)
+BuildRequires: cmake(KF6IconThemes)
+BuildRequires: cmake(KF6ColorScheme)
 
 %description
 Qt Quick Controls 2: Desktop Style
