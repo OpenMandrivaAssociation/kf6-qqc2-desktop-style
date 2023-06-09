@@ -1,5 +1,5 @@
 %define devname %mklibname KF6QqcDesktopStyle -d
-%define git 20230608
+%define git 20230609
 
 Name: kf6-qqc2-desktop-style
 Version: 5.240.0
