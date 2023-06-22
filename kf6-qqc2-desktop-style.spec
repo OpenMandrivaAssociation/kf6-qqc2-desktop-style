@@ -1,5 +1,5 @@
 %define devname %mklibname KF6QqcDesktopStyle -d
-%define git 20230609
+%define git 20230623
 
 Name: kf6-qqc2-desktop-style
 Version: 5.240.0
@@ -62,6 +62,7 @@ Qt Quick Controls 2: Desktop Style
 %files
 %{_qtdir}/qml/org/kde/desktop
 %{_qtdir}/qml/org/kde/qqc2desktopstyle
+%{_qtdir}/plugins/kf6/kirigami/org.kde.desktop.so
 
 %files -n %{devname}
 %{_libdir}/cmake/KF6QQC2DesktopStyle
