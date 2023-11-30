@@ -37,8 +37,6 @@ BuildRequires: cmake(KF6Config)
 BuildRequires: cmake(KF6Kirigami2)
 BuildRequires: cmake(KF6IconThemes)
 BuildRequires: cmake(KF6ColorScheme)
-# Prevent pulling in Plasma 5
-BuildRequires: plasma6-xdg-desktop-portal-kde
 
 %description
 Qt Quick Controls 2: Desktop Style
