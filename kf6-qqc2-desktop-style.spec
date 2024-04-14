@@ -1,15 +1,16 @@
+%define major %(echo %{version} |cut -d. -f1-2)
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
 
 %define devname %mklibname KF6QqcDesktopStyle -d
 #define git 20240217
 
 Name: kf6-qqc2-desktop-style
-Version: 6.0.0
-Release: %{?git:0.%{git}.}2
+Version: 6.1.0
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/qqc2-desktop-style/-/archive/master/qqc2-desktop-style-master.tar.bz2#/qqc2-desktop-style-%{git}.tar.bz2
 %else
-Source0: https://download.kde.org/%{stable}/frameworks/%{version}/qqc2-desktop-style-%{version}.tar.xz
+Source0: https://download.kde.org/%{stable}/frameworks/%{major}/qqc2-desktop-style-%{version}.tar.xz
 %endif
 Summary: Qt Quick Controls 2: Desktop Style
 URL: https://invent.kde.org/frameworks/qqc2-desktop-style
@@ -65,8 +66,9 @@ Qt Quick Controls 2: Desktop Style
 
 %install
 %ninja_install -C build
+%find_lang %{name} --all-name --with-qt
 
-%files
+%files -f %{name}.lang
 %{_qtdir}/qml/org/kde/desktop
 %{_qtdir}/qml/org/kde/qqc2desktopstyle
 %{_qtdir}/plugins/kf6/kirigami/platform/org.kde.desktop.so
