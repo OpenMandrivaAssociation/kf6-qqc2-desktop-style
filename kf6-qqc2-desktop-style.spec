@@ -5,7 +5,7 @@
 #define git 20240217
 
 Name: kf6-qqc2-desktop-style
-Version: 6.7.0
+Version: 6.8.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/qqc2-desktop-style/-/archive/master/qqc2-desktop-style-master.tar.bz2#/qqc2-desktop-style-%{git}.tar.bz2
